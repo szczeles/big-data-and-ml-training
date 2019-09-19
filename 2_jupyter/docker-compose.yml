@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  jupyter:
+    image: dataops/jupyter:latest
+    container_name: jupyter
+    networks: ["hadoop"]
+    volumes:
+     - notebooks:/home/jovyan/work
+     - /media/mario/059E416A0EA07DBC/:/data
+    ports:
+     - 8888:8888
+     - 4040-4050:4040-4050
+
+networks:
+  hadoop:
+    external:
+      name: minicluster
+
+volumes:
+  notebooks:
+

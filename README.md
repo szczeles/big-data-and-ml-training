@@ -13,3 +13,7 @@
 3. Pull images that we are going to need during the training:
 
         TODO
+
+4. Create docker network that we will use to connect cluster nodes:
+
+        docker network create minicluster
