@@ -23,3 +23,7 @@
 4. Create docker network that we will use to across cluster nodes:
 
         docker network create minicluster
+
+### Download links
+
+* [Badges](https://wetransfer.com/downloads/d3ede732a403dd8838e0ac26447232c420190922222112/d4a278e2d4874ce8e0a77604e4fd093020190922222112/5ba326)
