@@ -7,10 +7,11 @@ services:
     networks: ["hadoop"]
     volumes:
      - notebooks:/home/jovyan/work
-     - /media/mario/059E416A0EA07DBC/:/data
     ports:
      - 8888:8888
      - 4040-4050:4040-4050
+    env_file:
+      - ./hadoop.env
 
 networks:
   hadoop:

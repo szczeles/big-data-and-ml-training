@@ -10,7 +10,8 @@ services:
     environment:
       - CLUSTER_NAME=test
     ports:
-      - 50070:50070
+      - 50070:50070 # Web UI
+      - 9000:9000   # HDFS
     env_file:
       - ./hadoop.env
 
@@ -32,7 +33,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075"
     ports:
-      - 8088:8088
+      - 8088:8088 # UI
     env_file:
       - ./hadoop.env
 
@@ -43,7 +44,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075 resourcemanager:8088"
     ports:
-      - 8042:8042
+      - 8042:8042 # UI (logs access)
     env_file:
       - ./hadoop.env
   
@@ -56,7 +57,7 @@ services:
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
     ports:
-      - 8188:8188
+      - 8188:8188 # UI
     env_file:
       - ./hadoop.env
 
@@ -73,7 +74,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075"
     ports:
-      - "9083:9083"
+      - 9083:9083 # Thrift metastore
 
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
@@ -85,7 +86,7 @@ services:
       HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: ""
       SERVICE_PRECONDITION: "hive-metastore:9083"
     ports:
-      - "10000:10000"
+      - 10000:10000 # Thrift JDBC
 
 volumes:
   hadoop_namenode:
