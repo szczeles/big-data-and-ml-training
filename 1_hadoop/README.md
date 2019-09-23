@@ -8,6 +8,12 @@ yarn jar /opt/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.
 
 # Hive
 
+## Build metastore
+
+```
+docker build -t dataops/metastore .
+```
+
 ## Connecting via JDBC
 
 ```
