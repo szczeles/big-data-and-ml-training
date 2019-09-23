@@ -13,7 +13,7 @@
             --virtualbox-cpu-count=4 --virtualbox-disk-size=40960 \
             --virtualbox-no-vtx-check default
             
-3. Pull images that we are going to need during the training:
+3. Pull images that we are going to use during the training:
 
         docker pull bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
         docker pull bde2020/hive:2.3.2-postgresql-metastore
