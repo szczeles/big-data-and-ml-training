@@ -30,5 +30,5 @@ LOAD DATA LOCAL INPATH '/opt/hive/examples/files/kv1.txt' OVERWRITE INTO TABLE p
 ## Client container
 
 ```
-docker run --rm --env-file hadoop.env --network minicluster -ti bde2020/hadoop-base:2.0.0-hadoop2.7.4-java8 bash
+docker run --rm --env-file hadoop.env --network minicluster --entrypoint bash -ti bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
 ```
