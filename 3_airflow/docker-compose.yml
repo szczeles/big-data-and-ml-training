@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  airflow:
+    image: dataops/airflow:latest
+    container_name: airflow
+    networks: ["hadoop"]
+    environment:
+      - LOAD_EX=y
+      - AIRFLOW__CORE__FERNET_KEY=W4wdYjPCGsAvgl5Mm9bzpf3KXxsRW1P2W2_7lGmo96w=
+    ports:
+      - 8085:8080
+
+networks:
+  hadoop:
+    external:
+      name: 3_hadoop_default
+
