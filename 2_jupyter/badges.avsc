@@ -32,7 +32,12 @@
     },
     {
       "name": "TagBased",
-      "type": "boolean"
+      "type": [
+         "null",
+         "boolean"
+      ],
+      "doc": "This field may be null on older data",
+      "see": "https://documentation.org/urlurl"
     }
   ]
 }
