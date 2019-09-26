@@ -1,3 +1,10 @@
+# Build images
+
+```
+docker build -f Dockerfile-metastore -t dataops/metastore .
+docker build -f Dockerfile-nodemanager -t dataops/nodemanager .
+```
+
 # YARN
 
 ## Running example
@@ -7,12 +14,6 @@ yarn jar /opt/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.
 ```
 
 # Hive
-
-## Build metastore
-
-```
-docker build -t dataops/metastore .
-```
 
 ## Connecting via JDBC
 
