@@ -1,0 +1,8 @@
+FROM bde2020/hadoop-nodemanager:2.0.0-hadoop2.7.4-java8
+
+RUN echo 'deb http://archive.debian.org/debian jessie-backports main' > /etc/apt/sources.list && \
+echo 'deb http://deb.debian.org/debian jessie main' >> /etc/apt/sources.list && \
+echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/jessie && \
+apt update && \
+apt install -y python3
+
