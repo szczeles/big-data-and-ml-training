@@ -38,7 +38,7 @@ services:
       - ./hadoop.env
 
   nodemanager1:
-    image: bde2020/hadoop-nodemanager:2.0.0-hadoop2.7.4-java8
+    image: dataops/nodemanager
     container_name: nodemanager1
     networks: ["hadoop"]
     environment:
