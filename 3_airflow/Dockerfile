@@ -13,5 +13,6 @@ RUN mkdir -p /usr/share/man/man1 &&  \
 RUN mkdir /usr/local/airflow/jobs && mkdir /usr/local/airflow/dags && chown -R airflow /usr/local/airflow
 
 ENV HADOOP_CONF_DIR=/usr/local/airflow/hadoop-config
+ENV PYSPARK_PYTHON=python3
 
 USER airflow
